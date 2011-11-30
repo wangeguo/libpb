@@ -1,0 +1,17 @@
+libpb is a small code-size Protocol Buffers implementation, 
+Licensed under the MIT license (see LICENSE), and Based on 
+nanopb (Homepage: http://kapsi.fi/~jpa/nanopb/ License: zlib).
+
+Changes:
+     - Replaced "import nanopb.proto" with "import pb.proto" in .proto file if you need.
+	 - Rename "nanopb" ext to "pb",
+	   eg: required string number = 1 [(pb).max_size = 40];
+	 - Rename nanopb_generator.py to pbgen.py
+
+See tests and exmple to learn more.
+
+To compile the library, you'll need these libraries:
+protobuf-compiler python-protobuf libprotobuf-dev
+
+To run the tests, run make under the tests folder.
+If it completes without error, everything is fine.
