@@ -10,5 +10,5 @@ clean:
 	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $< fileproto.pb.c common.c
 
 fileproto.pb.c fileproto.pb.h: fileproto.proto ../generator/pbgen.py
-	protoc -I. -I../include/pb -I/usr/include -ofileproto.pb $<
+	protoc -I. -I../include -I/usr/include -ofileproto.pb $<
 	python ../generator/pbgen.py fileproto.pb

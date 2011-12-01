@@ -1,7 +1,8 @@
 CFLAGS=-ansi -Wall -Werror -I../include -g -O0 --coverage
 LDFLAGS=--coverage -L../lib -lpb
 DEPS = person.pb.h callbacks.pb.h unittests.h unittestproto.pb.h
-TESTS=test_decode1 test_encode1 decode_unittests encode_unittests
+TESTS=test_decode1 test_encode1 decode_unittests encode_unittests \
+	  test_encode_callbacks test_decode_callbacks
 
 all: breakpoints $(TESTS) run_unittests
 
@@ -20,7 +21,7 @@ decode_unittests: decode_unittests.o unittestproto.pb.o
 encode_unittests: encode_unittests.o unittestproto.pb.o
 
 %.pb: %.proto
-	protoc -I. -I../include/pb -I/usr/include -o$@ $<
+	protoc -I. -I../include/ -I/usr/include -o$@ $<
 
 %.pb.c %.pb.h: %.pb ../generator/pbgen.py
 	python ../generator/pbgen.py $<
@@ -39,7 +40,7 @@ run_unittests: decode_unittests encode_unittests test_encode1 test_decode1 test_
 	./encode_unittests > /dev/null
 	
 	[ "`./test_encode1 | ./test_decode1`" = \
-	"`./test_encode1 | protoc --decode=Person -I. -I../include/pb -I/usr/include person.proto`" ]
+	"`./test_encode1 | protoc --decode=Person -I. -I../include/ -I/usr/include person.proto`" ]
 	
 	[ "`./test_encode_callbacks | ./test_decode_callbacks`" = \
 	"`./test_encode_callbacks | protoc --decode=TestMessage callbacks.proto`" ]

@@ -39,3 +39,6 @@ descriptor:
 install:
 	cp -vf $(LIBRARY) /usr/local/lib/
 	cp -vrf ./include/pb /usr/local/include/
+	cp -vf ./generator/pbgen.py /usr/local/bin/
+	chmod +x /usr/local/bin/pbgen.py
+	cp -vf ./generator/pb_pb2.py /usr/local/bin/

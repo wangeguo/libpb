@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 '''Generate header file for libpb from a ProtoBuf FileDescriptorSet.'''
 
 import google.protobuf.descriptor_pb2 as descriptor

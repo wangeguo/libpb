@@ -1,4 +1,4 @@
-import "pb.proto";
+import "pb/pb.proto";
 
 // This defines protocol for a simple server that lists files.
 //

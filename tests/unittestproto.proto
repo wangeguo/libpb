@@ -1,4 +1,4 @@
-import 'pb.proto';
+import 'pb/pb.proto';
 
 message IntegerArray {
     repeated int32 data = 1 [(pb).max_count = 10];
