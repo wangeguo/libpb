@@ -3,10 +3,9 @@ Licensed under the MIT license (see LICENSE), and Based on
 nanopb (Homepage: http://kapsi.fi/~jpa/nanopb/ License: zlib).
 
 Changes:
-     - Replaced "import nanopb.proto" with "import pb.proto" in .proto file if you need.
-	 - Rename "nanopb" ext to "pb",
-	   eg: required string number = 1 [(pb).max_size = 40];
-	 - Rename nanopb_generator.py to pbgen.py
+ - Replaced "import nanopb.proto" with "import pb.proto" in .proto file if you need.
+ - Rename "nanopb" ext to "pb", eg: required string number = 1 [(pb).max_size = 40];
+ - Rename nanopb_generator.py to pbgen.py
 
 See tests and exmple to learn more.
 
