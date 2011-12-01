@@ -6,11 +6,14 @@ Changes:
  - Replaced "import nanopb.proto" with "import pb.proto" in .proto file if you need.
  - Rename "nanopb" ext to "pb", eg: required string number = 1 [(pb).max_size = 40];
  - Rename nanopb_generator.py to pbgen.py
-
 See tests and exmple to learn more.
 
 To compile the library, you'll need these libraries:
 protobuf-compiler python-protobuf libprotobuf-dev
+
+Install libpb is simple:
+make
+sudo make install
 
 To run the tests, run make under the tests folder.
 If it completes without error, everything is fine.
