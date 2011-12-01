@@ -16,7 +16,7 @@ LIBRARY = ./lib/libpb.a
 SUBDIRS = example tests docs
 
 
-all: $(LIBRARY) $(SUBDIRS)
+all: $(LIBRARY)
 
 clean:
 	-rm -rf ./lib/ ./src/*.o
