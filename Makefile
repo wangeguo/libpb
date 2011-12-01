@@ -35,3 +35,7 @@ descriptor:
 	
 .c.o:
 	$(CC) $(CFLAGS) $< -o $@
+
+install:
+	cp -vf $(LIBRARY) /usr/local/lib/
+	cp -vrf ./include/pb /usr/local/include/
