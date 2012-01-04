@@ -378,7 +378,7 @@ def generate_header(headername, enums, messages):
         yield msg.default_decl(True)
     yield '\n'
     
-    yield '/* Struct field encoding specification for nanopb */\n'
+    yield '/* Struct field encoding specification for lipb */\n'
     for msg in messages:
         yield msg.fields_declaration() + '\n'
     
@@ -387,7 +387,7 @@ def generate_header(headername, enums, messages):
 def generate_source(headername, enums, messages):
     '''Generate content for a source file.'''
     
-    yield '/* Automatically generated nanopb constant definitions */\n'
+    yield '/* Automatically generated libpb constant definitions */\n'
     yield '#include "%s"\n\n' % headername
     
     for msg in messages:

@@ -20,3 +20,4 @@ tests/testperson.pb
 example/fileproto.pb*
 *.pyc
 tests/callbacks.pb*
+tests/unittestproto.pb*
