@@ -14,7 +14,7 @@ message PBOptions {
 
 // Protocol Buffers extension number registry
 // --------------------------------                                                                                                            
-// Project:  lib
+// Project:  libpb
 // Contact:  Eguo Wang <wangeguo at gmail.com>                                                                                                    
 // Web site: http://github.com/wangeguo/libpb
 // Extensions: 1010 (all types)                                                                                                                

@@ -1,7 +1,7 @@
 #ifndef _PB_H_
 #define _PB_H_
 
-/* pb.h: Common parts for nanopb library.
+/* pb.h: Common parts for libpb library.
  * Most of these are quite low-level stuff. For the high-level interface,
  * see encode.h or decode.h
  */
